@@ -3,23 +3,13 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>NeuroTwin Studio — визуальный контент</title>
+  <title>NeuroTwin Studio — AI-видео и визуальный контент</title>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    }
-  </style>
 
   <script id="tailwind-config">
     tailwind.config = {
@@ -27,12 +17,12 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#a5f406",
+            primary: "#a5f406",
             "background-light": "#f7f8f5",
             "background-dark": "#000000",
           },
           fontFamily: {
-            "display": ["Space Grotesk", "sans-serif"]
+            display: ["Space Grotesk", "sans-serif"]
           },
           borderRadius: {
             "DEFAULT": "1rem",
@@ -44,945 +34,971 @@
       },
     }
   </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body class="font-display bg-background-dark text-white">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-  <div class="layout-container flex h-full grow flex-col">
+  <div class="flex h-full grow flex-col">
+    <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+      <div class="flex flex-col w-full max-w-[1280px] flex-1">
 
-    <!-- ========================= HEADER ========================= -->
-    <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 flex flex-1 justify-center pt-5 pb-0">
-      <div class="layout-content-container flex flex-col w-full max-w-[1280px] flex-1">
-
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-6 sm:px-8 md:px-10 py-4 rounded-xl bg-black/60 backdrop-blur">
+        <!-- ================= HEADER ================= -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-4 sm:px-6 md:px-8 py-4 rounded-xl mb-4">
+          <!-- Лого -->
           <div class="flex items-center gap-4 text-white">
             <div class="w-8 h-8">
               <img src="nts.png" alt="NeuroTwin Studio" class="w-8 h-8 rounded-full">
             </div>
-            <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">NeuroTwin Studio</h2>
+            <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+              NeuroTwin Studio
+            </h2>
           </div>
 
-          <nav class="hidden md:flex items-center gap-9 text-sm font-medium">
-            <a class="text-white/80 hover:text-primary transition-colors" href="#hero">Главная</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#about">О студии</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#advantages">Преимущества</a>
-            <a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#calculator">Калькулятор</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#cases">Кейсы</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#gallery">Галерея</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#articles">Статьи</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#faq">FAQ</a>
-            <a class="text-white/80 hover:text-primary transition-colors" href="#contacts">Контакты</a>
-          </nav>
+          <!-- Десктопная навигация + контакты -->
+          <div class="hidden md:flex items-center gap-10">
+            <nav class="flex items-center gap-9 text-sm font-medium">
+              <a class="text-white/80 hover:text-primary transition-colors" href="#hero">Главная</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#about">О студии</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#advantages">Преимущества</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#calculator">Калькулятор</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#cases">Кейсы</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#gallery">Галерея</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#articles">Статьи</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#faq">FAQ</a>
+              <a class="text-white/80 hover:text-primary transition-colors" href="#contacts">Контакты</a>
+            </nav>
 
-          <div class="flex items-center gap-2 sm:gap-4">
-            <div class="hidden sm:flex gap-2">
+            <div class="flex items-center gap-4">
+              <!-- Телефон -->
               <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
                 <span>+7 (965) 025-57-50</span>
               </button>
 
-              <button class="flex items-center justify-center rounded-full h-12 bg-primary text-black px-3 max-w-[480px] min-w-0 transition-all duration-300 hover:bg-opacity-90">
+              <!-- WhatsApp -->
+              <button class="flex items-center justify-center rounded-full h-12 w-12 bg-primary text-black transition-all duration-300 hover:bg-opacity-90">
                 <img src="whatsapp.png" class="h-6 w-6" alt="WhatsApp">
               </button>
 
-              <button class="flex items-center justify-center rounded-full h-12 bg-primary text-black px-3 max-w-[480px] min-w-0 transition-all duration-300 hover:bg-opacity-90">
+              <!-- Telegram -->
+              <button class="flex items-center justify-center rounded-full h-12 w-12 bg-primary text-black transition-all duration-300 hover:bg-opacity-90">
                 <img src="telegram.png" class="h-6 w-6" alt="Telegram">
               </button>
-            </div>
 
-            <div class="hidden sm:flex h-12 w-28 items-center justify-center rounded-full bg-white/10 p-1">
-              <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold leading-normal transition-colors">
-                <span class="truncate">EN</span>
-                <input class="invisible w-0" name="language-switcher" type="radio" value="EN"/>
-              </label>
-              <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold leading-normal transition-colors">
-                <span class="truncate">RU</span>
-                <input checked class="invisible w-0" name="language-switcher" type="radio" value="RU"/>
-              </label>
+              <!-- Переключатель языков -->
+              <div class="hidden lg:flex h-12 w-28 items-center justify-center rounded-full bg-white/10 p-1">
+                <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold leading-normal transition-colors">
+                  <span class="truncate">EN</span>
+                  <input class="invisible w-0" name="language-switcher" type="radio" value="EN"/>
+                </label>
+                <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold leading-normal transition-colors">
+                  <span class="truncate">RU</span>
+                  <input checked class="invisible w-0" name="language-switcher" type="radio" value="RU"/>
+                </label>
+              </div>
             </div>
+          </div>
 
-            <button class="md:hidden text-white p-2">
+          <!-- Мобильный блок -->
+          <div class="md:hidden flex items-center gap-2 sm:gap-3">
+            <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-black text-xs font-bold tracking-[0.03em] hover:bg-opacity-90 transition">
+              <span>+7 (965) 025-57-50</span>
+            </button>
+
+            <button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary text-black transition hover:bg-opacity-90">
+              <img src="whatsapp.png" class="h-5 w-5" alt="WhatsApp">
+            </button>
+
+            <button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary text-black transition hover:bg-opacity-90">
+              <img src="telegram.png" class="h-5 w-5" alt="Telegram">
+            </button>
+
+            <button class="text-white p-1.5">
               <span class="material-symbols-outlined">menu</span>
             </button>
           </div>
         </header>
-      </div>
-    </div>
 
-    <!-- ========================= HERO ========================= -->
-    <section id="hero" class="relative flex items-center justify-center py-16 sm:py-24 md:py-32">
-      <video
-        class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
-        autoplay
-        muted
-        loop
-        playsinline
-      >
-        <source src="hero-bg.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
+        <!-- ================= HERO ================= -->
+        <main id="hero" class="relative flex-grow flex flex-col gap-20 pb-20">
 
-      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 pointer-events-none"></div>
+          <!-- HERO с видео-фоном -->
+          <section class="relative flex items-center justify-center py-16 sm:py-24 md:py-32 overflow-hidden rounded-[32px] border border-white/10 mb-10">
+            <video
+              class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source src="hero-bg.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
 
-      <div class="relative @container text-center px-4 w-full max-w-[1280px]">
-        <div class="flex flex-col gap-6 items-center justify-center p-4">
-          <div class="flex flex-col gap-4 text-center">
-            <h1 class="text-white text-5xl font-black leading-tight tracking-tighter @[480px]:text-6xl @[768px]:text-7xl @[1024px]:text-8xl">
-              СОЗДАЁМ ПРОЕКТЫ, КОТОРЫЕ ГОВОРЯТ САМИ ЗА СЕБЯ
-            </h1>
-            <h2 class="text-white/70 text-base font-normal leading-normal max-w-2xl mx-auto @[480px]:text-lg">
-              Мы создаём визуальный контент, который работает на ваш бренд: продуманные, выразительные и современные решения для бизнеса.
-            </h2>
-          </div>
-          <a href="#cases" class="inline-flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 mt-6 bg-primary text-black text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
-            <span class="truncate">Наши работы</span>
-          </a>
-        </div>
-      </div>
-    </section>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 pointer-events-none"></div>
 
-    <!-- ========================= ABOUT ========================= -->
-    <section id="about" class="flex flex-1 justify-center py-16 sm:py-20 bg-background-dark">
-      <div class="flex w-full max-w-6xl flex-col px-4 sm:px-8">
-        <div class="mb-8">
-          <h2 class="text-primary text-xl font-bold leading-tight tracking-tight sm:text-2xl">О студии</h2>
-        </div>
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div class="flex items-center justify-center">
-            <div class="w-full overflow-hidden rounded-xl aspect-[4/5]">
-              <div class="h-full w-full bg-cover bg-center bg-no-repeat"
-                   data-alt="Команда в студии"
-                   style='background-image: url("logo.jpg");'>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col justify-center">
-            <div class="mb-10">
-              <h1 class="text-white text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                Мы создаём визуальный контент с характером<span class="text-primary">.</span>
-              </h1>
-            </div>
-
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
-                <p class="text-primary text-base font-semibold leading-normal">Смелость</p>
-                <p class="text-white/80 text-sm font-normal leading-relaxed">
-                  Мы не боимся экспериментировать и выходить за рамки привычного, чтобы создавать уникальные и запоминающиеся проекты.
-                </p>
-              </div>
-              <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
-                <p class="text-primary text-base font-semibold leading-normal">Технологии</p>
-                <p class="text-white/80 text-sm font-normal leading-relaxed">
-                  Используем передовое оборудование и программное обеспечение для достижения наилучшего качества и эффективности в работе.
-                </p>
-              </div>
-              <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
-                <p class="text-primary text-base font-semibold leading-normal">Эстетика</p>
-                <p class="text-white/80 text-sm font-normal leading-relaxed">
-                  Каждый кадр для нас — это произведение искусства. Мы уделяем максимум внимания деталям, композиции и цвету.
-                </p>
-              </div>
-              <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
-                <p class="text-primary text-base font-semibold leading-normal">Партнёрство</p>
-                <p class="text-white/80 text-sm font-normal leading-relaxed">
-                  Мы строим долгосрочные отношения с клиентами, становясь надёжным партнёром в решении визуальных задач.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= ADVANTAGES ========================= -->
-    <section id="advantages" class="w-full bg-primary py-16 sm:py-24 lg:py-32">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center text-center">
-          <h2 class="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl font-display">
-            Наши преимущества
-          </h2>
-          <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
-              <span class="material-symbols-outlined text-4xl text-white">rocket_launch</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold leading-tight text-white">Скорость доставки</h3>
-                <p class="text-base font-normal leading-normal text-gray-400">Эффективная реализация проектов и соблюдение сроков.</p>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
-              <span class="material-symbols-outlined text-4xl text-white">all_inclusive</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold leading-tight text-white">Полный цикл</h3>
-                <p class="text-base font-normal leading-normal text-gray-400">От идеи и сценария до финального ролика и адаптаций.</p>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
-              <span class="material-symbols-outlined text-4xl text-white">groups</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold leading-tight text-white">Профессиональная команда</h3>
-                <p class="text-base font-normal leading-normal text-gray-400">Опытные режиссёры, продюсеры, художники и motion-дизайнеры.</p>
-              </div>
-            </div>
-            <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
-              <span class="material-symbols-outlined text-4xl text-white">auto_awesome</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="text-xl font-bold leading-tight text-white">Высокое качество CG и motion</h3>
-                <p class="text-base font-normal leading-normal text-gray-400">Современная графика и анимация, соответствующие уровню бренда.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= CALCULATOR ========================= -->
-    <section id="calculator" class="bg-[#c4ff00] text-black py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-8">
-
-        <!-- Верх: заголовок + шоурил-тизер -->
-        <div class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] mb-10">
-          <div>
-            <h2 class="hero-title text-xl sm:text-2xl font-semibold uppercase tracking-[0.12em] mb-2">
-              Калькулятор видеопроизводства
-            </h2>
-
-            <div class="text-3xl sm:text-4xl font-extrabold leading-tight uppercase mb-5">
-              Создаём видеопроекты, которые говорят за бренд
-            </div>
-
-            <p class="text-sm max-w-md text-black/70 mb-4">
-              Ответьте на пару вопросов — и мы покажем ориентир по бюджету и срокам.
-              Дальше подключится режиссёр и дотянет идею до вау-уровня.
-            </p>
-
-          </div>
-
-          <!-- Шоурил-плейсхолдер -->
-          <div class="relative rounded-[32px] overflow-hidden bg-black min-h-[220px] shadow-2xl">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),linear-gradient(135deg,#050505,#202020)]"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center gap-4 text-center px-6 py-10 text-white">
-              <button type="button" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-white/40 bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                <span class="text-2xl">▶</span>
-              </button>
-              <div class="text-xs tracking-[0.22em] uppercase text-white/70">
-                общий шоурил студии
-              </div>
-              <p class="text-xs max-w-xs text-white/80">
-                Здесь будет видео-презентация. Сейчас — плейсхолдер: можно заменить на embed или тег &lt;video&gt;.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Низ: форма калькулятора + результат -->
-        <div class="grid gap-6 lg:grid-cols-[minmax(0,6fr)_minmax(260px,3.5fr)] items-start">
-
-          <!-- ЛЕВАЯ КОЛОНКА: форма -->
-          <section class="bg-[#101010] text-white rounded-[32px] p-6 sm:p-7 shadow-2xl relative overflow-hidden">
-            <div class="absolute -inset-[40%] opacity-70 pointer-events-none bg-[radial-gradient(circle_at_0%_0%,rgba(196,255,0,0.16),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(0,255,128,0.11),transparent_60%)]"></div>
-
-            <div class="relative z-10 flex flex-col gap-5">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-300/15 text-[10px] uppercase tracking-[0.16em] text-lime-200">
-                <span class="w-2 h-2 rounded-full bg-lime-300 shadow-[0_0_10px_rgba(190,255,80,0.9)]"></span>
-                черновой расчёт бюджета
-              </div>
-
-              <p class="text-xs text-white/70 max-w-xl">
-                Диапазон цен — чтобы понимать порядок. Итоговый расчёт зависит от ТЗ, локаций и сложности. 
-                В цене уже заложены два пакета правок, дальше можно докинуть дополнительные.
-              </p>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5 text-sm">
-
-                <!-- Сколько роликов -->
-                <div class="flex flex-col gap-1 text-xs">
-                  <label for="count" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Сколько роликов планируем?
-                  </label>
-                  <input id="count" type="number" min="1" max="30" value="1"
-                        class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition" />
-                  <small class="text-[11px] text-white/60">
-                    Серия контента спокойно тянем от 1 до 30 единиц.
-                  </small>
+            <div class="relative @container text-center px-4">
+              <div class="flex flex-col gap-6 items-center justify-center p-4">
+                <div class="flex flex-col gap-4 text-center">
+                  <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter">
+                    СОЗДАЁМ ПРОЕКТЫ, КОТОРЫЕ ГОВОРЯТ САМИ ЗА СЕБЯ
+                  </h1>
+                  <h2 class="text-white/70 text-base font-normal leading-normal max-w-2xl mx-auto sm:text-lg">
+                    Мы создаём визуальный контент, который работает на ваш бренд: продуманные, выразительные и современные решения для бизнеса.
+                  </h2>
                 </div>
-
-                <!-- Тип задачи -->
-                <div class="flex flex-col gap-1 text-xs">
-                  <label for="category" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Тип задачи
-                  </label>
-                  <select id="category"
-                          class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition">
-                    <option value="social">Для соцсетей / мессенджеров</option>
-                    <option value="event">Для мероприятий / экранов</option>
-                    <option value="avatar">Аватары / персональные AI-ролики</option>
-                    <option value="tv">ТВ-реклама</option>
-                    <option value="hostings">Видеохостинги (YouTube/ВК/RuTube)</option>
-                    <option value="marketplaces">Маркетплейсы</option>
-                  </select>
-                  <small class="text-[11px] text-white/60">
-                    От категории зависит формат, команда и ориентир по бюджету.
-                  </small>
-                </div>
-
-                <!-- Хронометраж -->
-                <div class="flex flex-col gap-1 text-xs sm:col-span-2">
-                  <label class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Хронометраж
-                  </label>
-                  <div id="duration-wrapper" class="space-y-1"></div>
-                  <small class="text-[11px] text-white/60">
-                    Если роликов немного — указываем для каждого. Если их много, можно указать суммарный хронометраж по всем.
-                  </small>
-                </div>
-
-                <!-- Город (для аватаров) -->
-                <div class="flex flex-col gap-1 text-xs sm:col-span-2" id="city-field" style="display:none;">
-                  <label for="city" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Где будут сниматься аватары?
-                  </label>
-                  <select id="city"
-                          class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition">
-                    <option value="moscow">Москва</option>
-                    <option value="spb">Санкт-Петербург</option>
-                    <option value="nsk">Новосибирск</option>
-                    <option value="other">Другой город</option>
-                  </select>
-                  <div id="city-warning"
-                      class="mt-2 rounded-xl border border-yellow-200/60 border-dashed bg-yellow-500/10 px-3 py-2 text-[11px] text-yellow-100"
-                      style="display:none;">
-                    Если это не крупный город-миллионник, стоимость может заметно вырасти из-за логистики и локаций.
-                  </div>
-                </div>
-
-                <!-- Что берём на себя -->
-                <div class="flex flex-col gap-2 text-xs sm:col-span-2">
-                  <label class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Что дополнительно берём на себя?
-                  </label>
-                  <div class="flex flex-wrap gap-2">
-                    <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
-                      <input id="script" type="checkbox" class="hidden" />
-                      <span class="w-3 h-3 rounded-full border border-white/60 bg-transparent peer-checked:bg-lime-300 peer-checked:border-lime-300"></span>
-                      <span>Сценарий и режиссёрская разработка</span>
-                    </label>
-                    <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
-                      <input id="fast" type="checkbox" class="hidden" />
-                      <span class="w-3 h-3 rounded-full border border-white/60"></span>
-                      <span>Ускоренные сроки (&lt; 2 недель)</span>
-                    </label>
-                    <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
-                      <input id="extraEdits" type="checkbox" class="hidden" />
-                      <span class="w-3 h-3 rounded-full border border-white/60"></span>
-                      <span>Доп. пакет правок (+25% к чеку)</span>
-                    </label>
-                  </div>
-                  <div class="text-[11px] text-amber-100/90 bg-amber-500/10 border border-amber-200/40 rounded-xl px-3 py-2">
-                    В базу уже входят два пакета правок. Ещё один круг согласований — +25% к бюджету, 
-                    но это даёт комфорт клиенту и возможность докрутить креатив.
-                  </div>
-                </div>
-
-                <!-- Комментарий -->
-                <div class="flex flex-col gap-1 text-xs sm:col-span-2">
-                  <label for="comment" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                    Одно предложение про задачу
-                  </label>
-                  <textarea id="comment"
-                            class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition min-h-[60px]"
-                            placeholder="Например: серия вертикальных роликов для запуска нового продукта."></textarea>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mt-2">
-                <button id="calcBtn"
-                        class="inline-flex items-center gap-2 rounded-full bg-black text-lime-300 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] shadow-[0_16px_30px_rgba(0,0,0,0.7)] hover:bg-lime-300 hover:text-black transition">
-                  Посчитать диапазон
-                  <span class="text-xs translate-y-[1px]">↗</span>
+                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 mt-4 bg-primary text-black text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                  <span class="truncate">Наши работы</span>
                 </button>
-                <div class="text-[11px] text-white/70 max-w-xs">
-                  Никаких обязательств: это черновая оценка, чтобы понимать порядок цифр перед созвоном.
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= ABOUT ================= -->
+          <section id="about" class="flex flex-1 justify-center">
+            <div class="flex w-full max-w-6xl flex-col px-2 sm:px-0">
+              <div class="mb-8">
+                <h2 class="text-primary text-xl font-bold leading-tight tracking-tight sm:text-2xl">О студии</h2>
+              </div>
+              <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+                <div class="flex items-center justify-center">
+                  <div class="w-full overflow-hidden rounded-xl aspect-[4/5] border border-white/10">
+                    <div class="h-full w-full bg-cover bg-center bg-no-repeat"
+                         data-alt="A creative team collaborating in a modern studio environment, with warm lighting and professional equipment."
+                         style='background-image: url("logo.jpg");'>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                  <div class="mb-10">
+                    <h1 class="text-white text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                      Мы создаём визуальный контент с характером
+                      <span class="text-primary">.</span>
+                    </h1>
+                  </div>
+
+                  <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
+                      <p class="text-primary text-base font-semibold leading-normal">Смелость</p>
+                      <p class="text-white/80 text-sm leading-relaxed">
+                        Мы не боимся экспериментировать и выходить за рамки привычного, чтобы создавать уникальные и запоминающиеся проекты.
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
+                      <p class="text-primary text-base font-semibold leading-normal">Технологии</p>
+                      <p class="text-white/80 text-sm leading-relaxed">
+                        Используем передовое оборудование и программное обеспечение для достижения наилучшего качества и эффективности в работе.
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
+                      <p class="text-primary text-base font-semibold leading-normal">Эстетика</p>
+                      <p class="text-white/80 text-sm leading-relaxed">
+                        Каждый кадр для нас — это произведение искусства. Мы уделяем максимум внимания деталям, композиции и цвету.
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-solid border-primary/30 pt-4">
+                      <p class="text-primary text-base font-semibold leading-normal">Партнерство</p>
+                      <p class="text-white/80 text-sm leading-relaxed">
+                        Мы строим долгосрочные отношения с клиентами, становясь надежным партнером в решении визуальных задач.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- ПРАВАЯ КОЛОНКА: результат -->
-          <aside class="bg-[#101010] text-white rounded-[32px] p-6 sm:p-7 shadow-2xl space-y-4" id="result">
-            <div>
-              <div class="text-[11px] uppercase tracking-[0.22em] text-white/60 mb-1">
-                Ориентировочный диапазон
-              </div>
-              <div class="result-price text-2xl font-extrabold mb-1">
-                от 20 000 ₽ — до 60 000 ₽
-              </div>
-              <div class="result-sub text-xs text-white/70">
-                Минимальный пакет для короткого AI-ролика. Точный бюджет обсуждаем после брифа.
-              </div>
-            </div>
-
-            <div id="summaryChips" class="flex flex-wrap gap-1.5 text-[11px]">
-              <span class="chip px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">1 ролик</span>
-              <span class="chip px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">~ 30 сек. суммарно</span>
-              <span class="chip px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">соцсети</span>
-            </div>
-
-            <div id="resultDetails" class="text-[11px] leading-relaxed text-white/80">
-              Указаны мягкие границы, которые зависят от: сценария, количества правок, кастинга, локаций и конкретного ТЗ.
-            </div>
-
-            <div class="text-[11px] leading-relaxed text-white/60">
-              Хочешь точный расчёт? Отправь это ТЗ менеджеру — мы соберём команду и предложим 1–2 формата по бюджету.
-            </div>
-
-            <!-- Кейсы -->
-            <div id="casesBlock" class="border-y border-white/10 py-3 text-[11px]">
-              <!-- Наполняется скриптом -->
-            </div>
-
-            <!-- Плейсхолдеры видео -->
-            <div class="space-y-2 text-[11px]">
-              <div class="uppercase tracking-[0.16em] text-white/60">
-                Посмотрите, как это может выглядеть в формате видео
-              </div>
-              <div class="flex flex-col gap-2">
-                <div class="flex items-center gap-3 rounded-2xl bg-black/60 px-3 py-2.5">
-                  <div class="w-[72px] h-[46px] rounded-xl bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),#000] flex items-center justify-center text-xs">
-                    ▶
-                  </div>
-                  <div>
-                    <div class="font-semibold text-[11px]">Плейсхолдер под кейс №1</div>
-                    <div class="text-[10px] text-white/70">
-                      Здесь будет врезка с реальным роликом — шоурил под выбранную категорию.
+          <!-- ================= ADVANTAGES ================= -->
+          <section id="advantages" class="w-full bg-primary py-16 sm:py-24 lg:py-32 mt-10 rounded-[32px]">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex flex-col items-center text-center">
+                <h2 class="text-3xl font-bold leading-tight tracking-tight text-black sm:text-4xl lg:text-5xl font-display">
+                  Наши преимущества
+                </h2>
+                <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                  <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
+                    <span class="material-symbols-outlined text-4xl text-white">rocket_launch</span>
+                    <div class="flex flex-col gap-1">
+                      <h3 class="text-xl font-bold leading-tight text-white">Скорость доставки</h3>
+                      <p class="text-base leading-normal text-gray-400">Эффективная реализация проектов и соблюдение сроков.</p>
                     </div>
                   </div>
-                </div>
 
-                <div class="flex items-center gap-3 rounded-2xl bg-black/60 px-3 py-2.5">
-                  <div class="w-[72px] h-[46px] rounded-xl bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),#000] flex items-center justify-center text-xs">
-                    ▶
+                  <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
+                    <span class="material-symbols-outlined text-4xl text-white">all_inclusive</span>
+                    <div class="flex flex-col gap-1">
+                      <h3 class="text-xl font-bold leading-tight text-white">Полный цикл: от сценария до финала</h3>
+                      <p class="text-base leading-normal text-gray-400">Комплексный сервис от идеи до готового продукта.</p>
+                    </div>
                   </div>
-                  <div>
-                    <div class="font-semibold text-[11px]">Плейсхолдер под кейс №2</div>
-                    <div class="text-[10px] text-white/70">
-                      Можно вставить YouTube/ВК/RuTube или &lt;video&gt; с живым примером.
+
+                  <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
+                    <span class="material-symbols-outlined text-4xl text-white">groups</span>
+                    <div class="flex flex-col gap-1">
+                      <h3 class="text-xl font-bold leading-tight text-white">Профессиональная команда</h3>
+                      <p class="text-base leading-normal text-gray-400">Команда опытных и талантливых специалистов.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-4 rounded-lg bg-[#1A1A1A] p-6 text-left transition-transform duration-300 hover:-translate-y-2">
+                    <span class="material-symbols-outlined text-4xl text-white">auto_awesome</span>
+                    <div class="flex flex-col gap-1">
+                      <h3 class="text-xl font-bold leading-tight text-white">Высокое качество CG и motion</h3>
+                      <p class="text-base leading-normal text-gray-400">Превосходство в компьютерной графике и моушн-дизайне.</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </section>
 
-            <!-- Заявка -->
-            <div class="pt-3 border-t border-white/10">
-              <button id="orderBtn"
-                      class="order-btn-big w-full rounded-2xl bg-lime-300 text-black text-[11px] font-bold uppercase tracking-[0.18em] py-3 shadow-[0_18px_40px_rgba(0,0,0,0.7)] hover:bg-lime-200 transition">
-                Заказать проект
-              </button>
+          <!-- ================= CALCULATOR ================= -->
+          <section id="calculator" class="bg-[#c4ff00] text-black py-16 mt-16 rounded-[32px]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-8">
 
-              <div id="orderForm" class="order-form mt-3 hidden flex-col gap-2 rounded-2xl bg-black/60 px-3 py-3 text-[11px]">
-                <div class="text-white/70 mb-1">
-                  Заполните контакты — мы вернёмся с вопросами по ТЗ и финальным просчётом под вашу задачу.
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label for="clientName" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
-                    Имя
-                  </label>
-                  <input id="clientName" type="text"
-                        class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                        placeholder="Как к вам обращаться?" />
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label for="clientContact" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
-                    Контакт
-                  </label>
-                  <input id="clientContact" type="text"
-                        class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                        placeholder="Телеграм, почта или телефон" />
-                </div>
-
-                <div class="flex flex-col gap-1">
-                  <label for="clientComment" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
-                    Комментарий
-                  </label>
-                  <textarea id="clientComment"
-                            class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300 min-h-[60px]"
-                            placeholder="Можете оставить ссылку на референсы или кратко описать задачу."></textarea>
-                </div>
-
-                <div class="text-[10px] text-white/60 mt-1">
-                  Отправка формы в демо никуда не улетает — на реальном сайте сюда подключается почта или CRM.
-                </div>
-              </div>
-            </div>
-          </aside>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========================= CASES GRID ========================= -->
-    <section id="cases" class="relative flex w-full flex-col bg-background-dark py-16 sm:py-24">
-      <div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center">
-        <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
-          <div class="flex flex-wrap justify-between gap-3 p-4 pb-10">
-            <div class="flex min-w-72 flex-col gap-3">
-              <p class="text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
-                Наши работы
-              </p>
-              <p class="text-white/60 text-base font-normal leading-normal">
-                Изучите последние проекты по созданию визуального контента.
-              </p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-            <!-- Case Card 1 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Абстрактный видеоролик"
-                src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-man-with-a-special-effect-43283-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Кинетическая типографика</h3>
-                <p class="text-sm text-white/80">для TechCorp</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Динамичная визуальная айдентика для запуска нового продукта.
-                </p>
-              </div>
-            </div>
-
-            <!-- Case Card 2 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Девушка в шляпе"
-                src="https://assets.mixkit.co/videos/preview/mixkit-woman-with-a-white-t-shirt-and-a-hat-in-a-basement-43292-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Брендовый имиджевый ролик</h3>
-                <p class="text-sm text-white/80">для Aura Cosmetics</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Эмоциональное видео, передающее характер и эстетику бренда.
-                </p>
-              </div>
-            </div>
-
-            <!-- Case Card 3 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Мужчина в тёмной комнате"
-                src="https://assets.mixkit.co/videos/preview/mixkit-man-with-a-long-beard-in-a-dark-room-43285-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Запуск продукта</h3>
-                <p class="text-sm text-white/80">для Nova Gadgets</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Высокодинамичная кампания для премьеры флагманского устройства.
-                </p>
-              </div>
-            </div>
-
-            <!-- Case Card 4 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Мужчина в драматичном свете"
-                src="https://assets.mixkit.co/videos/preview/mixkit-a-man-in-a-dark-room-43284-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Серия для соцсетей</h3>
-                <p class="text-sm text-white/80">для ConnectApp</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Увлекательный короткий контент для вирусной кампании.
-                </p>
-              </div>
-            </div>
-
-            <!-- Case Card 5 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Девушка позирует"
-                src="https://assets.mixkit.co/videos/preview/mixkit-woman-posing-for-the-camera-in-a-dark-basement-43290-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Архитектурная визуализация</h3>
-                <p class="text-sm text-white/80">для Apex Realty</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Кинематографичные рендеры будущих пространств.
-                </p>
-              </div>
-            </div>
-
-            <!-- Case Card 6 -->
-            <div class="group relative aspect-[3/4] overflow-hidden rounded-lg">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                data-alt="Мужчина в белой футболке"
-                src="https://assets.mixkit.co/videos/preview/mixkit-man-with-a-white-t-shirt-in-the-dark-43286-large.mp4">
-              </video>
-              <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
-              <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <h3 class="text-2xl font-bold tracking-tight">Документальный шорт</h3>
-                <p class="text-sm text-white/80">для Earthly NGO</p>
-                <p class="mt-2 text-sm leading-snug">
-                  Сильная история о влиянии человека на окружающую среду.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= VIDEO GALLERY ========================= -->
-    <section id="gallery" class="bg-[#111111] font-display text-[#F5F5F5] py-16 sm:py-24">
-      <div class="relative flex w-full flex-col items-center justify-center px-4 sm:px-8">
-        <div class="w-full max-w-7xl">
-          <div class="mb-8 flex w-full flex-col items-center justify-between gap-4 px-2 sm:flex-row sm:px-0">
-            <h2 class="text-3xl font-bold leading-tight tracking-tighter text-white sm:text-4xl">
-              Последние работы
-            </h2>
-            <div class="flex items-center gap-2">
-              <button class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-transparent text-primary transition-colors hover:bg-primary hover:text-background-dark">
-                <span class="material-symbols-outlined text-2xl">arrow_back</span>
-              </button>
-              <button class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-transparent text-primary transition-colors hover:bg-primary hover:text-background-dark">
-                <span class="material-symbols-outlined text-2xl">arrow_forward</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="relative w-full">
-            <div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div class="flex flex-none items-stretch gap-8 p-2 sm:p-4">
-                <!-- Card 1 -->
-                <div class="group relative h-[420px] sm:h-[520px] w-[260px] sm:w-[320px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
-                  <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhd7ENz0C-v78IvYsARGBXAOrAmeOp2kzNgtwBONigtQTNxzsM30dUElNtVrVQpP1en0viQlOV07778xy_zSQJpcDXGzCk0fMMXWYHMKEkYICJ_iC4mC73vHLOZIcCqjcTe99OtDGgBZDcMTwBTkVQVwsANB5BYpaEqA8Mu8U3oxY0fIc5pUH7kpLDb34lNdmU4zP_EI1q9vHO-SEaKbE8Vdm7B1inr_K68bQushQUz3o-Tey5kKYrVaBJvOLvH_PuzIsJE_kbjRI");'></div>
-                  <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-black/70 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="group relative h-[420px] sm:h-[520px] w-[260px] sm:w-[320px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
-                  <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwBm7ZAi5LP2TtAb76OG1BiInHLQGZkTLhhrpIaF1YrICWWC2VuTuus906eursdIc--DqRd9Se2suSE2CgcRB7OfFE54M81-BhLs4_Cn9fL_JR-I5S04edXQf8uBc8d55TWBDIvaIiOy53n6z0te3r9urH6hJegxAQgqU-aYMWudBGhpijbasCZGUyN28NxwE5iKeUHGcnay0Tyn-fyiM7IgKvwzjlpP0ShFtTtWuZ7ogqahnncv53_yH9jZlqfg6SJKl6f7Whx2o");'></div>
-                  <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-black/70 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="group relative h-[420px] sm:h-[520px] w-[260px] sm:w-[320px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
-                  <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCe0UyIy-WnP6GtC35ScDCp20CbMucBI5OqHzLVmV9-mlaZvzRHYNzrr9ourE-QSeWgRasDrtgDM3fyf3OSj25kL4GdTVfehNb9u_PpJ9gIWh_kIBeRcbfHYPlpCM6WkO1XLIS3RnWOxH_O1wcbXWZKOYegru1dTcBD4R9y8wmSL1zuNLN_KgJDk2rse4zwDevERMUY7m9xGd0QvmYqLmbO4Z9xKur5J3I9L7kVdht2xL2XZVL2z8fgUPj---6_svBWN24fVMdl9I0");'></div>
-                  <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-black/70 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="group relative h-[420px] sm:h-[520px] w-[260px] sm:w-[320px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
-                  <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoJMQJG2aG48VrwT_GyO58vHvSahr0pc2QtU_Q62CZJXtN7sVbOnFzUW6CIw6jra6Zw3uQ2MZq4jj2EBLmt57cSbMu4HRUIfC5yN2NDixq-kzgKT_Relayu-JOb5Ue1t3BbQ8_Wb_5eslteBD9fltqB9xE3dUVo6wbSSO9AAbpwpwF3Gj-6GvFx2KWXurlksKxp0y5Oec2oo_8OKDgXmGBcVU0nGIR06yeExAO5IqEeKjNtYKO8GK4X0tVAMKn3w8sodHDhQZvcwk");'></div>
-                  <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-black/70 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="group relative h-[420px] sm:h-[520px] w-[260px] sm:w-[320px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
-                  <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVeF95pEuFdR1nidB3a58c5k36A2xYnUwGFdj1g00LPeATz0JghrxqpfqXYP1QjYr-hhCmVAUF14RUu5JfTscM1KrHYgtO2cuLIyhQDDtXWykEM3VGIKBkePi3MXEDmpzBiCAcWB3ZC5FRdjGXNie7OTSlvowtcQTnNToq-fkHckaf0bqfQ1Vkq8llQFwDnKbiqp6l3xeAhFIizXUgcaN-Q__PNs4fbB2ELHoarZ5FyNo_EGXQ5pcCPevih66jAK31hG0To9IpQmM");'></div>
-                  <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
-                    <div class="flex h-16 w-16 items-center justify-center rounded-full bg-black/70 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <span class="material-symbols-outlined text-4xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= ARTICLES ========================= -->
-    <section id="articles" class="bg-background-light dark:bg-[#121212] font-display py-16 sm:py-24">
-      <div class="relative flex h-auto w-full flex-col group/design-root">
-        <div class="layout-container flex h-full grow flex-col">
-          <div class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 flex flex-1 justify-center">
-            <div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
-              <h2 class="text-black dark:text-[#F5F5F5] text-4xl sm:text-5xl font-bold leading-tight tracking-tighter px-4 pb-8 pt-5">
-                Из студии
-              </h2>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 p-4">
-                <!-- Card 1 -->
-                <div class="flex flex-col gap-4 p-6 bg-background-light dark:bg-[#1a1a1a] rounded-xl border border-transparent hover:border-primary/50 transition-colors duration-300">
-                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Абстрактное цифровое искусство" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtYrzO5eTmUa6Qp0PQQrzb3eLFTRa-nxT2ruTiaRy8mdTwSw54ndQ0LYdd5Hxe6qWjtplMMd1-MFvrMZfv0daCKHYzTLW7oyKCMn7LDcYNCtFdBjQJ_ssUAFW_43MGcoV9yz8G5KRdRu_lWKVFNawGnogvRdSlFGiv8BrH_4Yw4vijDBi7styNor4KkR4n85sh-Gb7DlmSOvG3D4N30obA6T6nvhHzPJrlMHHtpPJduzqHGaEHnVY1Ghxr9xfyY9rCVTKlmMle58Q");'></div>
-                  <div class="flex flex-col gap-2">
-                    <p class="text-black dark:text-white text-xl font-bold leading-snug">Сила генеративного ИИ в визуалах</p>
-                    <p class="text-gray-600 dark:text-[#A0A0A0] text-base font-normal leading-relaxed">
-                      Исследуем, как генеративный ИИ меняет создание визуального контента, расширяя границы креативности и эффективности.
-                    </p>
-                    <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="#">
-                      <span>Читать далее</span>
-                      <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="flex flex-col gap-4 p-6 bg-background-light dark:bg-[#1a1a1a] rounded-xl border border-transparent hover:border-primary/50 transition-colors duration-300">
-                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Бренд-материалы" style='background-image: url("livcar.png");'></div>
-                  <div class="flex flex-col gap-2">
-                    <p class="text-black dark:text-white text-xl font-bold leading-snug">Как Ливкар перешёл от съёмок к нейросетям</p>
-                    <p class="text-gray-600 dark:text-[#A0A0A0] text-base font-normal leading-relaxed">
-                      Мы предложили сделать ролик, где машины мчатся по Азии, Европе и России — и при этом не тратить миллионы на съёмки. Для этого мы использовали генеративные нейросети и полностью цифровой продакшн.
-                    </p>
-                    <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="#">
-                      <span>Читать далее</span>
-                      <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="flex flex-col gap-4 p-6 bg-background-light dark:bg-[#1a1a1a] rounded-xl border border-transparent hover:border-primary/50 transition-colors duration-300">
-                  <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Глобальная нейросеть" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9jvakg-XV0b0te6fQ8ebLf0zc1n5_dci1b_nPVQ2OiL61rmLGXWuPAWoxb2lVWuNQRAMlG0q4kQPvPV0RfLEaiEpavwgRjlayQGMTwByyWScYbegZGX0pYw-1D-zfoCGGh8xT-7xT_PTrKcLFBditOrlBrEjwFIpWngPsooLU8sSEifCP5d74-xhlSD-hdiucW5V6T6x8K1J67coGZMJoYTQRY7QeB9wZvAM-QNg088aU05Ru90poN36dm_y8G679yqK29jHbzKg");'></div>
-                  <div class="flex flex-col gap-2">
-                    <p class="text-black dark:text-white text-xl font-bold leading-snug">Нейросети для художников</p>
-                    <p class="text-gray-600 dark:text-[#A0A0A0] text-base font-normal leading-relaxed">
-                      Практическое руководство для художников о том, как использовать нейросети как инструмент для создания уникальных и выразительных работ.
-                    </p>
-                    <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="#">
-                      <span>Читать далее</span>
-                      <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex px-4 py-6 sm:py-10 justify-center">
-                <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-[#121212] text-lg font-bold leading-normal tracking-wide transition-transform duration-300 hover:scale-105">
-                  <span class="truncate">Все статьи</span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= FAQ ========================= -->
-    <section id="faq" class="bg-background-light dark:bg-black py-16 sm:py-24">
-      <div class="relative flex h-auto w-full flex-col">
-        <div class="layout-container flex h-full grow flex-col">
-          <main class="flex-1">
-            <section class="w-full px-4 sm:px-6 lg:px-8">
-              <div class="mx-auto max-w-4xl">
-                <div class="text-center mb-12">
-                  <h2 class="font-display text-4xl font-bold tracking-tight text-zinc-800 dark:text-white sm:text-5xl md:text-6xl">
-                    Есть вопросы?
+              <!-- Верх: текст + шоурил -->
+              <div class="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,4fr)] mb-10">
+                <div>
+                  <h2 class="text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] mb-3">
+                    Калькулятор видеопроизводства
                   </h2>
-                  <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-                    Найдите ответы на частые вопросы о наших услугах и процессе работы.
-                  </p>
-                </div>
 
-                <div class="flex flex-col space-y-2">
-                  <details class="group border-b border-white/20 py-4">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
-                      <h3 class="text-xl font-bold">
-                        Каков стандартный срок выполнения проекта?
-                      </h3>
-                      <span class="material-symbols-outlined text-primary text-3xl transition-transform group-open:rotate-45">add</span>
-                    </summary>
-                    <div class="mt-4 text-zinc-300">
-                      <p>
-                        Сроки выполнения зависят от объёма и сложности проекта. Обычно первый черновик мы предоставляем в течение 2–3 недель. В предложении мы укажем подробный таймлайн, чтобы вы точно знали, чего ожидать.
-                      </p>
-                    </div>
-                  </details>
-
-                  <details class="group border-b border-white/20 py-4">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
-                      <h3 class="text-xl font-bold">
-                        Какой визуальный контент вы создаёте?
-                      </h3>
-                      <span class="material-symbols-outlined text-primary text-3xl transition-transform group-open:rotate-45">add</span>
-                    </summary>
-                    <div class="mt-4 text-zinc-300">
-                      <p>
-                        Мы создаём коммерческую фотографию, бренд-видео, продуктовые ролики, анимационную и CG-графику. Наша цель — делать визуалы, которые поддерживают идентику бренда и помогают достигать маркетинговых целей.
-                      </p>
-                    </div>
-                  </details>
-
-                  <details class="group border-b border-white/20 py-4">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
-                      <h3 class="text-xl font-bold">
-                        Как устроена ваша система ценообразования?
-                      </h3>
-                      <span class="material-symbols-outlined text-primary text-3xl transition-transform group-open:rotate-45">add</span>
-                    </summary>
-                    <div class="mt-4 text-zinc-300">
-                      <p>
-                        Стоимость рассчитывается под каждый проект отдельно. После консультации мы подготовим прозрачный расчёт, где будут указаны все расходы, без скрытых платежей. Есть решения под разные бюджеты.
-                      </p>
-                    </div>
-                  </details>
-
-                  <details class="group border-b border-white/20 py-4">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
-                      <h3 class="text-xl font-bold">
-                        Могу ли я участвовать в творческом процессе?
-                      </h3>
-                      <span class="material-symbols-outlined text-primary text-3xl transition-transform group-open:rotate-45">add</span>
-                    </summary>
-                    <div class="mt-4 text-zinc-300">
-                      <p>
-                        Конечно. Мы приветствуем вашу вовлечённость на всех этапах: от концепции и сториборда до пост-продакшена и финальных правок. Ваше видение помогает сделать результат точнее.
-                      </p>
-                    </div>
-                  </details>
-
-                  <details class="group border-b border-white/20 py-4">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
-                      <h3 class="text-xl font-bold">
-                        Какие финальные материалы я получу?
-                      </h3>
-                      <span class="material-symbols-outlined text-primary text-3xl transition-transform group-open:rotate-45">add</span>
-                    </summary>
-                    <div class="mt-4 text-zinc-300">
-                      <p>
-                        Вы получите файлы в высоком разрешении в согласованных форматах — версии для веба, соцсетей и печати. Все материалы готовы к использованию сразу после сдачи проекта.
-                      </p>
-                    </div>
-                  </details>
-                </div>
-              </div>
-            </section>
-          </main>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================= CONTACTS ========================= -->
-    <section id="contacts" class="bg-background-dark py-16 sm:py-24">
-      <div class="relative flex h-auto w-full flex-col overflow-x-hidden">
-        <div class="layout-container flex h-full grow flex-col">
-          <div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center">
-            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-
-              <h1 class="text-white tracking-light text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-4 text-center pb-8">
-                СВЯЖИТЕСЬ С НАМИ
-              </h1>
-
-              <div class="flex flex-col items-center w-full">
-                <form class="flex flex-col gap-6 w-full max-w-xl">
-                  <div class="flex flex-col sm:flex-row gap-6">
-                    <label class="flex flex-col min-w-40 flex-1">
-                      <p class="text-white text-base font-medium leading-normal pb-2">Имя</p>
-                      <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary h-14 placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-colors duration-300" placeholder="Ваше имя" value=""/>
-                    </label>
-
-                    <label class="flex flex-col min-w-40 flex-1">
-                      <p class="text-white text-base font-medium leading-normal pb-2">Email</p>
-                      <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary h-14 placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-colors duration-300" placeholder="Ваш Email" type="email" value=""/>
-                    </label>
+                  <div class="text-3xl sm:text-4xl font-extrabold leading-tight uppercase mb-5">
+                    Создаём видеопроекты, которые говорят за бренд
                   </div>
 
-                  <label class="flex flex-col min-w-40 flex-1">
-                    <p class="text-white text-base font-medium leading-normal pb-2">Сообщение</p>
-                    <textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary min-h-36 placeholder:text-gray-500 p-[15px] text-base font-normal leading-normal transition-colors duration-300" placeholder="Расскажите нам о вашем проекте..."></textarea>
-                  </label>
+                  <p class="text-sm max-w-md text-black/70 mb-4">
+                    Ответьте на пару вопросов — и мы покажем ориентир по бюджету и срокам.
+                    Дальше подключится режиссёр и дотянет идею до вау-уровня.
+                  </p>
 
-                  <div class="flex px-0 pt-2 justify-center">
-                    <button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 flex-1 bg-primary text-[#000000] text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-300 hover:scale-105">
-                      <span class="truncate">Отправить сообщение</span>
+                  <div class="flex items-center gap-4 mb-3">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl border border-black/70 overflow-hidden flex items-center justify-center bg-transparent">
+                      <img src="logo.png" alt="Логотип Neurotwin Studio" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                      <div class="text-base font-extrabold uppercase tracking-[0.12em]">
+                        Neurotwin Studio
+                      </div>
+                      <div class="text-xs text-black/70 mt-1">
+                        AI-видео для медиа, мероприятий и аватаров.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative rounded-[32px] overflow-hidden bg-black min-h-[220px] shadow-2xl">
+                  <div class="absolute inset-0 bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),linear-gradient(135deg,#050505,#202020)]"></div>
+                  <div class="relative z-10 flex flex-col items-center justify-center gap-4 text-center px-6 py-10 text-white">
+                    <button type="button" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-white/40 bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                      <span class="text-2xl">▶</span>
+                    </button>
+                    <div class="text-xs tracking-[0.22em] uppercase text-white/70">
+                      общий шоурил студии
+                    </div>
+                    <p class="text-xs max-w-xs text-white/80">
+                      Здесь будет видео-презентация. Сейчас — плейсхолдер: можно заменить на embed или тег &lt;video&gt;.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Низ: сама форма + результат -->
+              <div class="grid gap-6 lg:grid-cols-[minmax(0,6fr)_minmax(260px,3.5fr)] items-start">
+
+                <!-- Левая: форма -->
+                <section class="bg-[#101010] text-white rounded-[32px] p-6 sm:p-7 shadow-2xl relative overflow-hidden">
+                  <div class="absolute -inset-[40%] opacity-70 pointer-events-none bg-[radial-gradient(circle_at_0%_0%,rgba(196,255,0,0.16),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(0,255,128,0.11),transparent_60%)]"></div>
+
+                  <div class="relative z-10 flex flex-col gap-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-300/15 text-[10px] uppercase tracking-[0.16em] text-lime-200">
+                      <span class="w-2 h-2 rounded-full bg-lime-300 shadow-[0_0_10px_rgba(190,255,80,0.9)]"></span>
+                      черновой расчёт бюджета
+                    </div>
+
+                    <p class="text-xs text-white/70 max-w-xl">
+                      Диапазон цен — чтобы понимать порядок. Итоговый расчёт зависит от ТЗ, локаций и сложности.
+                      В цене уже заложены два пакета правок, дальше можно докинуть дополнительные.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5 text-sm">
+
+                      <!-- Сколько роликов -->
+                      <div class="flex flex-col gap-1 text-xs">
+                        <label for="count" class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Сколько роликов планируем?
+                        </label>
+                        <input id="count" type="number" min="1" max="30" value="1"
+                               class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition" />
+                        <small class="text-[11px] text-white/60">
+                          Серия контента спокойно тянем от 1 до 30 единиц.
+                        </small>
+                      </div>
+
+                      <!-- Тип задачи -->
+                      <div class="flex flex-col gap-1 text-xs">
+                        <label for="category" class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Тип задачи
+                        </label>
+                        <select id="category"
+                                class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition">
+                          <option value="social">Для соцсетей / мессенджеров</option>
+                          <option value="event">Для мероприятий / экранов</option>
+                          <option value="avatar">Аватары / персональные AI-ролики</option>
+                          <option value="tv">ТВ-реклама</option>
+                          <option value="hostings">Видеохостинги (YouTube/ВК/RuTube)</option>
+                          <option value="marketplaces">Маркетплейсы</option>
+                        </select>
+                        <small class="text-[11px] text-white/60">
+                          От категории зависит формат, команда и ориентир по бюджету.
+                        </small>
+                      </div>
+
+                      <!-- Хронометраж -->
+                      <div class="flex flex-col gap-1 text-xs sm:col-span-2">
+                        <label class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Хронометраж
+                        </label>
+                        <div id="duration-wrapper" class="space-y-1"></div>
+                        <small class="text-[11px] text-white/60">
+                          Если роликов немного — указываем для каждого. Если их много, можно указать суммарный хронометраж по всем.
+                        </small>
+                      </div>
+
+                      <!-- Город для аватаров -->
+                      <div class="flex flex-col gap-1 text-xs sm:col-span-2" id="city-field" style="display:none;">
+                        <label for="city" class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Где будут сниматься аватары?
+                        </label>
+                        <select id="city"
+                                class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition">
+                          <option value="moscow">Москва</option>
+                          <option value="spb">Санкт-Петербург</option>
+                          <option value="nsk">Новосибирск</option>
+                          <option value="other">Другой город</option>
+                        </select>
+                        <div id="city-warning"
+                             class="mt-2 rounded-xl border border-yellow-200/60 border-dashed bg-yellow-500/10 px-3 py-2 text-[11px] text-yellow-100"
+                             style="display:none;">
+                          Если это не крупный город-миллионник, стоимость может заметно вырасти из-за логистики и локаций.
+                        </div>
+                      </div>
+
+                      <!-- Что берём на себя -->
+                      <div class="flex flex-col gap-2 text-xs sm:col-span-2">
+                        <label class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Что дополнительно берём на себя?
+                        </label>
+                        <div class="flex flex-wrap gap-2">
+                          <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
+                            <input id="script" type="checkbox" class="hidden" />
+                            <span class="w-3 h-3 rounded-full border border-white/60"></span>
+                            <span>Сценарий и режиссёрская разработка</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
+                            <input id="fast" type="checkbox" class="hidden" />
+                            <span class="w-3 h-3 rounded-full border border-white/60"></span>
+                            <span>Ускоренные сроки (&lt; 2 недель)</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
+                            <input id="extraEdits" type="checkbox" class="hidden" />
+                            <span class="w-3 h-3 rounded-full border border-white/60"></span>
+                            <span>Доп. пакет правок (+25% к чеку)</span>
+                          </label>
+                        </div>
+                        <div class="text-[11px] text-amber-100/90 bg-amber-500/10 border border-amber-200/40 rounded-xl px-3 py-2">
+                          В базу уже входят два пакета правок. Ещё один круг согласований — +25% к бюджету,
+                          но это даёт комфорт клиенту и возможность докрутить креатив.
+                        </div>
+                      </div>
+
+                      <!-- Комментарий -->
+                      <div class="flex flex-col gap-1 text-xs sm:col-span-2">
+                        <label for="comment" class="font-semibold uppercase tracking-[0.16em] text-white/80">
+                          Одно предложение про задачу
+                        </label>
+                        <textarea id="comment"
+                                  class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition min-h-[60px]"
+                                  placeholder="Например: серия вертикальных роликов для запуска нового продукта."></textarea>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mt-2">
+                      <button id="calcBtn"
+                              class="inline-flex items-center gap-2 rounded-full bg-black text-lime-300 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] shadow-[0_16px_30px_rgba(0,0,0,0.7)] hover:bg-lime-300 hover:text-black transition">
+                        Посчитать диапазон
+                        <span class="text-xs translate-y-[1px]">↗</span>
+                      </button>
+                      <div class="text-[11px] text-white/70 max-w-xs">
+                        Никаких обязательств: это черновая оценка, чтобы понимать порядок цифр перед созвоном.
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Правая: результат -->
+                <aside class="bg-[#101010] text-white rounded-[32px] p-6 sm:p-7 shadow-2xl space-y-4" id="result">
+                  <div>
+                    <div class="text-[11px] uppercase tracking-[0.22em] text-white/60 mb-1">
+                      Ориентировочный диапазон
+                    </div>
+                    <div class="result-price text-2xl font-extrabold mb-1">
+                      от 20 000 ₽ — до 60 000 ₽
+                    </div>
+                    <div class="result-sub text-xs text-white/70">
+                      Минимальный пакет для короткого AI-ролика. Точный бюджет обсуждаем после брифа.
+                    </div>
+                  </div>
+
+                  <div id="summaryChips" class="flex flex-wrap gap-1.5 text-[11px]">
+                    <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">1 ролик</span>
+                    <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">~ 30 сек. суммарно</span>
+                    <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 whitespace-nowrap">соцсети</span>
+                  </div>
+
+                  <div id="resultDetails" class="text-[11px] leading-relaxed text-white/80">
+                    Указаны мягкие границы, которые зависят от: сценария, количества правок, кастинга, локаций и конкретного ТЗ.
+                  </div>
+
+                  <div class="text-[11px] leading-relaxed text-white/60">
+                    Хочешь точный расчёт? Отправь это ТЗ менеджеру — мы соберём команду и предложим 1–2 формата по бюджету.
+                  </div>
+
+                  <!-- Кейсы -->
+                  <div id="casesBlock" class="border-y border-white/10 py-3 text-[11px]">
+                    <!-- наполняется скриптом -->
+                  </div>
+
+                  <!-- Видео-плейсхолдеры -->
+                  <div class="space-y-2 text-[11px]">
+                    <div class="uppercase tracking-[0.16em] text-white/60">
+                      Посмотрите, как это может выглядеть в формате видео
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <div class="flex items-center gap-3 rounded-2xl bg-black/60 px-3 py-2.5">
+                        <div class="w-[72px] h-[46px] rounded-xl bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),#000] flex items-center justify-center text-xs">
+                          ▶
+                        </div>
+                        <div>
+                          <div class="font-semibold text-[11px]">Плейсхолдер под кейс №1</div>
+                          <div class="text-[10px] text-white/70">
+                            Здесь будет врезка с реальным роликом — шоурил под выбранную категорию.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="flex items-center gap-3 rounded-2xl bg-black/60 px-3 py-2.5">
+                        <div class="w-[72px] h-[46px] rounded-xl bg-[radial-gradient(circle_at_10%_0%,rgba(255,0,120,0.6),transparent_55%),radial-gradient(circle_at_90%_100%,rgba(0,200,255,0.5),transparent_55%),#000] flex items-center justify-center text-xs">
+                          ▶
+                        </div>
+                        <div>
+                          <div class="font-semibold text-[11px]">Плейсхолдер под кейс №2</div>
+                          <div class="text-[10px] text-white/70">
+                            Можно вставить YouTube/ВК/RuTube или &lt;video&gt; с живым примером.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Заявка -->
+                  <div class="pt-3 border-t border-white/10">
+                    <button id="orderBtn"
+                            class="w-full rounded-2xl bg-lime-300 text-black text-[11px] font-bold uppercase tracking-[0.18em] py-3 shadow-[0_18px_40px_rgba(0,0,0,0.7)] hover:bg-lime-200 transition">
+                      Заказать проект
+                    </button>
+
+                    <div id="orderForm" class="mt-3 hidden flex-col gap-2 rounded-2xl bg-black/60 px-3 py-3 text-[11px]">
+                      <div class="text-white/70 mb-1">
+                        Заполните контакты — мы вернёмся с вопросами по ТЗ и финальным просчётом под вашу задачу.
+                      </div>
+
+                      <div class="flex flex-col gap-1">
+                        <label for="clientName" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
+                          Имя
+                        </label>
+                        <input id="clientName" type="text"
+                               class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                               placeholder="Как к вам обращаться?" />
+                      </div>
+
+                      <div class="flex flex-col gap-1">
+                        <label for="clientContact" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
+                          Контакт
+                        </label>
+                        <input id="clientContact" type="text"
+                               class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                               placeholder="Телеграм, почта или телефон" />
+                      </div>
+
+                      <div class="flex flex-col gap-1">
+                        <label for="clientComment" class="uppercase tracking-[0.16em] text-white/70 text-[10px]">
+                          Комментарий
+                        </label>
+                        <textarea id="clientComment"
+                                  class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300 min-h-[60px]"
+                                  placeholder="Можете оставить ссылку на референсы или кратко описать задачу."></textarea>
+                      </div>
+
+                      <div class="text-[10px] text-white/60 mt-1">
+                        Отправка формы в демо никуда не улетает — на реальном сайте сюда подключается почта или CRM.
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= CASES (НАШИ РАБОТЫ) ================= -->
+          <section id="cases" class="mt-20">
+            <div class="px-2 sm:px-0 flex justify-center">
+              <div class="max-w-[1200px] w-full">
+                <div class="flex flex-wrap justify-between gap-3 p-2 sm:p-4 py-8 sm:py-10">
+                  <div class="flex min-w-72 flex-col gap-3">
+                    <p class="text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                      Наши работы
+                    </p>
+                    <p class="text-white/60 text-base leading-normal">
+                      Изучите последние проекты по созданию визуального контента.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-2 sm:p-4">
+                  <!-- Карточки; у всех bg-zinc-900 + текст всегда видим на мобиле -->
+                  <!-- 1 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-abstract-video-of-a-man-with-a-special-effect-43283-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Кинетическая типографика</h3>
+                      <p class="text-sm text-white/80">для TechCorp</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Динамичная визуальная айдентика для запуска нового продукта.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 2 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-woman-with-a-white-t-shirt-and-a-hat-in-a-basement-43292-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Брендовый имиджевый ролик</h3>
+                      <p class="text-sm text-white/80">для Aura Cosmetics</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Эмоциональное видео, передающее характер и эстетику бренда.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 3 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-man-with-a-long-beard-in-a-dark-room-43285-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Запуск продукта</h3>
+                      <p class="text-sm text-white/80">для Nova Gadgets</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Высокодинамичная кампания для премьеры флагманского устройства.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 4 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-a-man-in-a-dark-room-43284-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Серия для соцсетей</h3>
+                      <p class="text-sm text-white/80">для ConnectApp</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Увлекательный короткий контент для вирусной кампании.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 5 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-woman-posing-for-the-camera-in-a-dark-basement-43290-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Архитектурная визуализация</h3>
+                      <p class="text-sm text-white/80">для Apex Realty</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Кинематографичные рендеры будущих пространств.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- 6 -->
+                  <div class="group relative aspect-[3/4] overflow-hidden rounded-lg bg-zinc-900">
+                    <video
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      class="absolute h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src="https://assets.mixkit.co/videos/preview/mixkit-man-with-a-white-t-shirt-in-the-dark-43286-large.mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-black/30 transition-all duration-300 group-hover:bg-black/60"></div>
+                    <div class="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 class="text-2xl font-bold tracking-tight">Документальный шорт</h3>
+                      <p class="text-sm text-white/80">для Earthly NGO</p>
+                      <p class="mt-2 text-sm leading-snug">
+                        Сильная история о влиянии человека на окружающую среду.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= VIDEO GALLERY ================= -->
+          <section id="gallery" class="mt-20">
+            <div class="relative flex w-full flex-col items-center justify-center overflow-hidden p-4 sm:p-0">
+              <div class="w-full max-w-7xl">
+                <div class="mb-8 flex w-full flex-col items-center justify-between gap-4 px-2 sm:flex-row sm:px-0">
+                  <h2 class="text-3xl font-bold leading-tight tracking-tighter text-white sm:text-4xl">
+                    Последние работы
+                  </h2>
+                  <div class="flex items-center gap-2">
+                    <button id="gallery-prev" class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-transparent text-primary transition-colors hover:bg-primary hover:text-background-dark">
+                      <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    </button>
+                    <button id="gallery-next" class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-transparent text-primary transition-colors hover:bg-primary hover:text-background-dark">
+                      <span class="material-symbols-outlined text-2xl">arrow_forward</span>
                     </button>
                   </div>
-                </form>
+                </div>
+
+                <div class="relative w-full">
+                  <div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" id="gallery-scroll">
+                    <div class="flex flex-none items-stretch gap-8 p-2 sm:p-4">
+                      <!-- Карточки галереи (как у тебя в видео gallery block) -->
+                      <div class="group relative h-[580px] w-[360px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110"
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhd7ENz0C-v78IvYsARGBXAOrAmeOp2kzNgtwBONigtQTNxzsM30dUElNtVrVQpP1en0viQlOV07778xy_zSQJpcDXGzCk0fMMXWYHMKEkYICJ_iC4mC73vHLOZIcCqjcTe99OtDGgBZDcMTwBTkVQVwsANB5BYpaEqA8Mu8U3oxY0fIc5pUH7kpLDb34lNdmU4zP_EI1q9vHO-SEaKbE8Vdm7B1inr_K68bQushQUz3o-Tey5kKYrVaBJvOLvH_PuzIsJE_kbjRI");'></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
+                          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group relative h-[580px] w-[360px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110"
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwBm7ZAi5LP2TtAb76OG1BiInHLQGZkTLhhrpIaF1YrICWWC2VuTuus906eursdIc--DqRd9Se2suSE2CgcRB7OfFE54M81-BhLs4_Cn9fL_JR-I5S04edXQf8uBc8d55TWBDIvaIiOy53n6z0te3r9urH6hJegxAQgqU-aYMWudBGhpijbasCZGUyN28NxwE5iKeUHGcnay0Tyn-fyiM7IgKvwzjlpP0ShFtTtWuZ7ogqahnncv53_yH9jZlqfg6SJKl6f7Whx2o");'></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
+                          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group relative h-[580px] w-[360px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110"
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCe0UyIy-WnP6GtC35ScDCp20CbMucBI5OqHzLVmV9-mlaZvzRHYNzrr9ourE-QSeWgRasDrtgDM3fyf3OSj25kL4GdTVfehNb9u_PpJ9gIWh_kIBeRcbfHYPlpCM6WkO1XLIS3RnWOxH_O1wcbXWZKOYegru1dTcBD4R9y8wmSL1zuNLN_KgJDk2rse4zwDevERMUY7m9xGd0QvmYqLmbO4Z9xKur5J3I9L7kVdht2xL2XZVL2z8fgUPj---6_svBWN24fVMdl9I0");'></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
+                          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group relative h-[580px] w-[360px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110"
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoJMQJG2aG48VrwT_GyO58vHvSahr0pc2QtU_Q62CZJXtN7sVbOnFzUW6CIw6jra6Zw3uQ2MZq4jj2EBLmt57cSbMu4HRUIfC5yN2NDixq-kzgKT_Relayu-JOb5Ue1t3BbQ8_Wb_5eslteBD9fltqB9xE3dUVo6wbSSO9AAbpwpwF3Gj-6GvFx2KWXurlksKxp0y5Oec2oo_8OKDgXmGBcVU0nGIR06yeExAO5IqEeKjNtYKO8GK4X0tVAMKn3w8sodHDhQZvcwk");'></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
+                          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group relative h-[580px] w-[360px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-[#222] transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-[0_0_25px_-5px_rgba(165,244,6,0.7)]">
+                        <div class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-110"
+                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVeF95pEuFdR1nidB3a58c5k36A2xYnUwGFdj1g00LPeATz0JghrxqpfqXYP1QjYr-hhCmVAUF14RUu5JfTscM1KrHYgtO2cuLIyhQDDtXWykEM3VGIKBkePi3MXEDmpzBiCAcWB3ZC5FRdjGXNie7OTSlvowtcQTnNToq-fkHckaf0bqfQ1Vkq8llQFwDnKbiqp6l3xeAhFIizXUgcaN-Q__PNs4fbB2ELHoarZ5FyNo_EGXQ5pcCPevih66jAK31hG0To9IpQmM");'></div>
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300 group-hover:opacity-75">
+                          <div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-5xl text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div class="flex justify-center items-center gap-6 mt-10 px-4">
-                <a aria-label="Instagram" class="text-white hover:text-primary transition-colors duration-300" href="#">
-                  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="3.2"></circle>
-                    <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm0 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
-                  </svg>
-                </a>
-
-                <a aria-label="LinkedIn" class="text-white hover:text-primary transition-colors duration-300" href="#">
-                  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.2c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V24h-4V8z"></path>
-                  </svg>
-                </a>
-
-                <a aria-label="Vimeo" class="text-white hover:text-primary transition-colors duration-300" href="#">
-                  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.56 8.21c-.2-1.89-1.7-3.15-3.63-3.15-2.55 0-4.66 2.34-6.06 4.85L11.4 7.2c-.3-1.83-1.7-3.14-3.5-3.14-2.53 0-4.64 2.33-6.04 4.84L0 10.15l1.9 1.41 1.32-1.89c.62-.88 1.2-1.58 1.7-1.58.4 0 .7.3.9 1.04l1.52 7.54 3.03-.4 1.9-3.5c.8-1.5 1.5-2.66 2.1-3.5l.1-.14c.5-.7.9-1.08 1.3-1.08.4 0 .7.3.9 1.04l1.32 7.38 3.02-.4-1.64-9.22z"></path>
-                  </svg>
-                </a>
-              </div>
-
-              <div class="mt-10 text-center text-white/60 text-sm">
-                © 2025 NeuroTwin Studio. Все права защищены.
-              </div>
-
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
 
+          <!-- ================= ARTICLES ================= -->
+          <section id="articles" class="mt-20">
+            <div class="flex justify-center px-2 sm:px-0">
+              <div class="flex flex-col w-full max-w-[1200px] flex-1">
+                <h2 class="text-white text-3xl sm:text-4xl font-bold leading-tight tracking-tighter px-2 sm:px-4 pb-6">
+                  Из студии
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 p-2 sm:p-4">
+                  <!-- 1 -->
+                  <div class="flex flex-col gap-4 p-6 bg-background-dark border border-white/10 rounded-xl hover:border-primary/50 transition-colors duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtYrzO5eTmUa6Qp0PQQrzb3eLFTRa-nxT2ruTiaRy8mdTwSw54ndQ0LYdd5Hxe6qWjtplMMd1-MFvrMZfv0daCKHYzTLW7oyKCMn7LDcYNCtFdBjQJ_ssUAFW_43MGcoV9yz8G5KRdRu_lWKVFNawGnogvRdSlFGiv8BrH_4Yw4vijDBi7styNor4KkR4n85sh-Gb7DlmSOvG3D4N30obA6T6nvhHzPJrlMHHtpPJduzqHGaEHnVY1Ghxr9xfyY9rCVTKlmMle58Q");'></div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-white text-xl font-bold leading-snug">Сила генеративного ИИ в визуалах</p>
+                      <p class="text-gray-400 text-base leading-relaxed">
+                        Исследуем, как генеративный ИИ меняет создание визуального контента, расширяя границы креативности и эффективности.
+                      </p>
+                      <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="#">
+                        <span>Читать далее</span>
+                        <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- 2: Ливкар -->
+                  <div class="flex flex-col gap-4 p-6 bg-background-dark border border-white/10 rounded-xl hover:border-primary/50 transition-colors duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                         style='background-image: url("livcar.png");'></div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-white text-xl font-bold leading-snug">
+                        Как Ливкар перешёл от съёмок к нейросетям
+                      </p>
+                      <p class="text-gray-400 text-base leading-relaxed">
+                        Мы предложили сделать ролик, где машины мчатся по Азии, Европе и России — и при этом не тратить миллионы на съёмки. Для этого мы использовали генеративные нейросети и полностью цифровой продакшн.
+                      </p>
+                      <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="livcar.html">
+                        <span>Читать далее</span>
+                        <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- 3 -->
+                  <div class="flex flex-col gap-4 p-6 bg-background-dark border border-white/10 rounded-xl hover:border-primary/50 transition-colors duration-300">
+                    <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                         style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9jvakg-XV0b0te6fQ8ebLf0zc1n5_dci1b_nPVQ2OiL61rmLGXWuPAWoxb2lVWuNQRAMlG0q4kQPvPV0RfLEaiEpavwgRjlayQGMTwByyWScYbegZGX0pYw-1D-zfoCGGh8xT-7xT_PTrKcLFBditOrlBrEjwFIpWngPsooLU8sSEifCP5d74-xhlSD-hdiucW5V6T6x8K1J67coGZMJoYTQRY7QeB9wZvAM-QNg088aU05Ru90poN36dm_y8G679yqK29jHbzKg");'></div>
+                    <div class="flex flex-col gap-2">
+                      <p class="text-white text-xl font-bold leading-snug">Нейросети для художников</p>
+                      <p class="text-gray-400 text-base leading-relaxed">
+                        Практическое руководство для художников о том, как использовать нейросети как инструмент для создания уникальных и выразительных работ.
+                      </p>
+                      <a class="group text-primary text-base font-medium leading-normal inline-flex items-center gap-2 mt-2" href="#">
+                        <span>Читать далее</span>
+                        <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex px-2 sm:px-4 py-10 justify-center">
+                  <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-[#121212] text-lg font-bold leading-normal tracking-wide transition-transform duration-300 hover:scale-105">
+                    <span class="truncate">Все статьи</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= FAQ ================= -->
+          <section id="faq" class="mt-10 sm:mt-16">
+            <div class="mx-auto max-w-4xl px-2 sm:px-0 py-10 sm:py-14">
+              <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
+                  Есть вопросы?
+                </h2>
+                <p class="mt-4 text-lg text-zinc-400">
+                  Найдите ответы на частые вопросы о наших услугах и процессе работы.
+                </p>
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <details class="group border-b border-white/20 py-4">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
+                    <h3 class="text-xl font-bold">
+                      Каков стандартный срок выполнения проекта?
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-3xl">add</span>
+                  </summary>
+                  <div class="mt-4 text-zinc-300 text-sm sm:text-base">
+                    Сроки выполнения зависят от объёма и сложности проекта. Обычно первый черновик мы предоставляем в течение 2–3 недель. В первоначальном предложении мы укажем подробный таймлайн, чтобы вы точно знали, чего ожидать.
+                  </div>
+                </details>
+
+                <details class="group border-b border-white/20 py-4">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
+                    <h3 class="text-xl font-bold">
+                      Какой визуальный контент вы создаёте?
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-3xl">add</span>
+                  </summary>
+                  <div class="mt-4 text-zinc-300 text-sm sm:text-base">
+                    Мы создаём широкий спектр визуального контента: коммерческую фотографию, бренд-видео, продуктовые ролики и анимационную графику. Наша цель — делать визуалы, которые поддерживают идентику вашего бренда и помогают достигать маркетинговых целей.
+                  </div>
+                </details>
+
+                <details class="group border-b border-white/20 py-4">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
+                    <h3 class="text-xl font-bold">
+                      Как устроена ваша система ценообразования?
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-3xl">add</span>
+                  </summary>
+                  <div class="mt-4 text-zinc-300 text-sm sm:text-base">
+                    Стоимость рассчитывается под каждый проект отдельно. После первоначальной консультации мы подготовим прозрачный расчёт, где будут указаны все расходы. Никаких скрытых платежей. У нас есть пакеты под разные бюджеты, и мы можем адаптировать решение под ваши задачи.
+                  </div>
+                </details>
+
+                <details class="group border-b border-white/20 py-4">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
+                    <h3 class="text-xl font-bold">
+                      Могу ли я участвовать в творческом процессе?
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-3xl">add</span>
+                  </summary>
+                  <div class="mt-4 text-zinc-300 text-sm sm:text-base">
+                    Конечно. Мы считаем, что сотрудничество — ключ к успешному проекту. Мы приветствуем вашу вовлечённость на всех этапах: от концепции и сториборда до пост-продакшена и финальных правок. Ваше видение помогает нам сделать результат точнее.
+                  </div>
+                </details>
+
+                <details class="group border-b border-white/20 py-4">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-white hover:text-primary transition-colors">
+                    <h3 class="text-xl font-bold">
+                      Какие финальные материалы я получу?
+                    </h3>
+                    <span class="material-symbols-outlined text-primary text-3xl">add</span>
+                  </summary>
+                  <div class="mt-4 text-zinc-300 text-sm sm:text-base">
+                    После завершения проекта вы получите файлы в высоком разрешении в согласованных форматах. Обычно это версии, оптимизированные для веба, социальных сетей и печати. Мы следим, чтобы все материалы были качественными и готовы к использованию.
+                  </div>
+                </details>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= CONTACTS ================= -->
+          <section id="contacts" class="mt-10 sm:mt-16 mb-10">
+            <div class="flex justify-center px-4 md:px-10 lg:px-20 xl:px-40">
+              <div class="flex flex-col max-w-[960px] flex-1">
+                <h1 class="tracking-light text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center pb-8">
+                  СВЯЖИТЕСЬ С НАМИ
+                </h1>
+
+                <div class="flex flex-col items-center w-full">
+                  <form class="flex flex-col gap-6 w-full max-w-xl">
+                    <div class="flex flex-col sm:flex-row gap-6">
+                      <label class="flex flex-col min-w-40 flex-1">
+                        <p class="text-base font-medium leading-normal pb-2">Имя</p>
+                        <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary h-14 placeholder:text-gray-500 p-[15px] text-base leading-normal transition-colors duration-300" placeholder="Ваше имя"/>
+                      </label>
+
+                      <label class="flex flex-col min-w-40 flex-1">
+                        <p class="text-base font-medium leading-normal pb-2">Email</p>
+                        <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary h-14 placeholder:text-gray-500 p-[15px] text-base leading-normal transition-colors duration-300" placeholder="Ваш Email" type="email"/>
+                      </label>
+                    </div>
+
+                    <label class="flex flex-col min-w-40 flex-1">
+                      <p class="text-base font-medium leading-normal pb-2">Сообщение</p>
+                      <textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-md text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#333333] bg-[#1a1a1a] focus:border-primary min-h-36 placeholder:text-gray-500 p-[15px] text-base leading-normal transition-colors duration-300" placeholder="Расскажите нам о вашем проекте..."></textarea>
+                    </label>
+
+                    <div class="flex px-0 pt-2 justify-center">
+                      <button class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 flex-1 bg-primary text-[#000000] text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-300 hover:scale-105">
+                        <span class="truncate">ОТПРАВИТЬ СООБЩЕНИЕ</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="border-t border-white/10 py-6 mt-auto">
+          <div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/60 px-2 sm:px-0">
+            <span>© 2025 NeuroTwin Studio. Все права защищены.</span>
+            <span class="text-white/40">AI-видео, motion, CG.</span>
+          </div>
+        </footer>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- ================= SCRIPTS ================= -->
 <script>
+  // ===== Галерея: стрелки =====
+  const galleryScroll = document.getElementById('gallery-scroll');
+  const galleryPrev = document.getElementById('gallery-prev');
+  const galleryNext = document.getElementById('gallery-next');
+
+  if (galleryScroll && galleryPrev && galleryNext) {
+    const step = 320;
+    galleryPrev.addEventListener('click', () => {
+      galleryScroll.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+    galleryNext.addEventListener('click', () => {
+      galleryScroll.scrollBy({ left: step, behavior: 'smooth' });
+    });
+  }
+
+  // ===== Калькулятор =====
   const countInput = document.getElementById('count');
   const durationWrapper = document.getElementById('duration-wrapper');
   const categorySelect = document.getElementById('category');
@@ -1358,14 +1374,12 @@
     renderCases(category);
   }
 
-  // Инициализация
   createDurationInputs();
   handleCategoryChange();
   if (citySelect) handleCityChange();
   renderCases('social');
   recalc();
 
-  // Лиснеры
   countInput.addEventListener('input', () => {
     createDurationInputs();
     recalc();
@@ -1396,6 +1410,5 @@
     orderForm.classList.toggle('hidden');
   });
 </script>
-
 </body>
 </html>
