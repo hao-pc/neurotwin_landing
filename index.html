@@ -277,12 +277,11 @@
                   </h2>
 
                   <div class="text-3xl sm:text-4xl font-extrabold leading-tight uppercase mb-5">
-                    Создаём видеопроекты, которые говорят за бренд
+                    Видеоролики, которые работают на бренд
                   </div>
 
                   <p class="text-sm max-w-md text-black/70 mb-4">
-                    Ответьте на пару вопросов — и мы покажем ориентир по бюджету и срокам.
-                    Дальше подключится режиссёр и дотянет идею до вау-уровня.
+                    Ответьте на несколько вопросов — покажем примерный бюджет и сроки. Потом подключим режиссёра и предложим конкретную идею.
                   </p>
 
                   <div class="flex items-center gap-4 mb-3">
@@ -307,10 +306,10 @@
                       <span class="text-2xl">▶</span>
                     </button>
                     <div class="text-xs tracking-[0.22em] uppercase text-white/70">
-                      общий шоурил студии
+                      шоу-рил студии
                     </div>
                     <p class="text-xs max-w-xs text-white/80">
-                      Здесь будет видео-презентация. Сейчас — плейсхолдер: можно заменить на embed или тег &lt;video&gt;.
+                      Здесь будет видео-презентация: embed или тег &lt;video&gt; с реальным роликом.
                     </p>
                   </div>
                 </div>
@@ -326,12 +325,11 @@
                   <div class="relative z-10 flex flex-col gap-5">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-300/15 text-[10px] uppercase tracking-[0.16em] text-lime-200">
                       <span class="w-2 h-2 rounded-full bg-lime-300 shadow-[0_0_10px_rgba(190,255,80,0.9)]"></span>
-                      черновой расчёт бюджета
+                      предварительный расчёт бюджета
                     </div>
 
                     <p class="text-xs text-white/70 max-w-xl">
-                      Диапазон цен — чтобы понимать порядок. Итоговый расчёт зависит от ТЗ, локаций и сложности.
-                      В цене уже заложены два пакета правок, дальше можно докинуть дополнительные.
+                      Это черновой диапазон. Итоговая сумма зависит от ТЗ, локаций и сложности. Включены два пакета правок, дополнительные обсуждаем отдельно.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5 text-sm">
@@ -339,12 +337,12 @@
                       <!-- Сколько роликов -->
                       <div class="flex flex-col gap-1 text-xs">
                         <label for="count" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                          Сколько роликов планируем?
+                          Сколько роликов?
                         </label>
                         <input id="count" type="number" min="1" max="30" value="1"
-                               class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition" />
+                              class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition" />
                         <small class="text-[11px] text-white/60">
-                          Серия контента спокойно тянем от 1 до 30 единиц.
+                          Считаем серию от 1 до 30 роликов.
                         </small>
                       </div>
 
@@ -362,8 +360,8 @@
                           <option value="hostings">Видеохостинги (YouTube/ВК/RuTube)</option>
                           <option value="marketplaces">Маркетплейсы</option>
                         </select>
-                        <small class="text-[11px] text-white/60">
-                          От категории зависит формат, команда и ориентир по бюджету.
+                        <small class="text=[11px] text-white/60">
+                          От категории зависят формат, команда и бюджет.
                         </small>
                       </div>
 
@@ -374,7 +372,7 @@
                         </label>
                         <div id="duration-wrapper" class="space-y-1"></div>
                         <small class="text-[11px] text-white/60">
-                          Если роликов немного — указываем для каждого. Если их много, можно указать суммарный хронометраж по всем.
+                          До 5 роликов — указывайте каждый. Больше 5 — укажите суммарный хронометраж.
                         </small>
                       </div>
 
@@ -391,44 +389,43 @@
                           <option value="other">Другой город</option>
                         </select>
                         <div id="city-warning"
-                             class="mt-2 rounded-xl border border-yellow-200/60 border-dashed bg-yellow-500/10 px-3 py-2 text-[11px] text-yellow-100"
-                             style="display:none;">
-                          Если это не крупный город-миллионник, стоимость может заметно вырасти из-за логистики и локаций.
+                            class="mt-2 rounded-xl border border-yellow-200/60 border-dashed bg-yellow-500/10 px-3 py-2 text-[11px] text-yellow-100"
+                            style="display:none;">
+                          В городах меньше-миллионников логистика и локации заметно повышают бюджет.
                         </div>
                       </div>
 
                       <!-- Что берём на себя -->
                       <div class="flex flex-col gap-2 text-xs sm:col-span-2">
                         <label class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                          Что дополнительно берём на себя?
+                          Что берём на себя?
                         </label>
                         <div class="flex flex-wrap gap-2">
                           <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
                             <input id="script" type="checkbox" class="hidden" />
                             <span class="w-3 h-3 rounded-full border border-white/60"></span>
-                            <span>Сценарий и режиссёрская разработка</span>
+                            <span>Сценарий и режиссура</span>
                           </label>
                           <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
                             <input id="fast" type="checkbox" class="hidden" />
                             <span class="w-3 h-3 rounded-full border border-white/60"></span>
-                            <span>Ускоренные сроки (&lt; 2 недель)</span>
+                            <span>Срочно (до 2 недель)</span>
                           </label>
                           <label class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] cursor-pointer">
                             <input id="extraEdits" type="checkbox" class="hidden" />
                             <span class="w-3 h-3 rounded-full border border-white/60"></span>
-                            <span>Доп. пакет правок (+25% к чеку)</span>
+                            <span>Доп. пакет правок (+25%)</span>
                           </label>
                         </div>
                         <div class="text-[11px] text-amber-100/90 bg-amber-500/10 border border-amber-200/40 rounded-xl px-3 py-2">
-                          В базу уже входят два пакета правок. Ещё один круг согласований — +25% к бюджету,
-                          но это даёт комфорт клиенту и возможность докрутить креатив.
+                          Включены два пакета правок. Третий круг согласований — +25% к бюджету и больше времени на креатив.
                         </div>
                       </div>
 
                       <!-- Комментарий -->
                       <div class="flex flex-col gap-1 text-xs sm:col-span-2">
                         <label for="comment" class="font-semibold uppercase tracking-[0.16em] text-white/80">
-                          Одно предложение про задачу
+                          Ваша задача (одно предложение)
                         </label>
                         <textarea id="comment"
                                   class="rounded-2xl border border-white/10 bg-black/80 px-3 py-2 text-sm outline-none focus:border-lime-300 focus:bg-black transition min-h-[60px]"
@@ -443,7 +440,7 @@
                         <span class="text-xs translate-y-[1px]">↗</span>
                       </button>
                       <div class="text-[11px] text-white/70 max-w-xs">
-                        Никаких обязательств: это черновая оценка, чтобы понимать порядок цифр перед созвоном.
+                        Никаких обязательств — это ориентир перед созвоном.
                       </div>
                     </div>
                   </div>
@@ -453,13 +450,13 @@
                 <aside class="bg-[#101010] text-white rounded-[32px] p-6 sm:p-7 shadow-2xl space-y-4" id="result">
                   <div>
                     <div class="text-[11px] uppercase tracking-[0.22em] text-white/60 mb-1">
-                      Ориентировочный диапазон
+                      Примерный бюджет
                     </div>
                     <div class="result-price text-2xl font-extrabold mb-1">
                       от 20 000 ₽ — до 60 000 ₽
                     </div>
                     <div class="result-sub text-xs text-white/70">
-                      Минимальный пакет для короткого AI-ролика. Точный бюджет обсуждаем после брифа.
+                      Минимальный пакет для короткого AI-ролика. Точный бюджет обсудим после брифа.
                     </div>
                   </div>
 
@@ -470,11 +467,11 @@
                   </div>
 
                   <div id="resultDetails" class="text-[11px] leading-relaxed text-white/80">
-                    Указаны мягкие границы, которые зависят от: сценария, количества правок, кастинга, локаций и конкретного ТЗ.
+                    Диапазон зависит от сценария, правок, кастинга, локаций и ТЗ.
                   </div>
 
                   <div class="text-[11px] leading-relaxed text-white/60">
-                    Хочешь точный расчёт? Отправь это ТЗ менеджеру — мы соберём команду и предложим 1–2 формата по бюджету.
+                    Нужен точный расчёт? Отправьте это ТЗ менеджеру — соберём команду и предложим 1–2 формата по бюджету.
                   </div>
 
                   <!-- Кейсы -->
@@ -485,7 +482,7 @@
                   <!-- Видео-плейсхолдеры -->
                   <div class="space-y-2 text-[11px]">
                     <div class="uppercase tracking-[0.16em] text-white/60">
-                      Посмотрите, как это может выглядеть в формате видео
+                      Примеры похожих видео
                     </div>
                     <div class="flex flex-col gap-2">
                       <div class="flex items-center gap-3 rounded-2xl bg-black/60 px-3 py-2.5">
@@ -493,9 +490,9 @@
                           ▶
                         </div>
                         <div>
-                          <div class="font-semibold text-[11px]">Плейсхолдер под кейс №1</div>
+                          <div class="font-semibold text-[11px]">Кейс №1</div>
                           <div class="text-[10px] text-white/70">
-                            Здесь будет врезка с реальным роликом — шоурил под выбранную категорию.
+                            Здесь будет реальный ролик под выбранную категорию.
                           </div>
                         </div>
                       </div>
@@ -505,9 +502,9 @@
                           ▶
                         </div>
                         <div>
-                          <div class="font-semibold text-[11px]">Плейсхолдер под кейс №2</div>
+                          <div class="font-semibold text-[11px]">Кейс №2</div>
                           <div class="text-[10px] text-white/70">
-                            Можно вставить YouTube/ВК/RuTube или &lt;video&gt; с живым примером.
+                            Можно вставить YouTube/ВК/RuTube или &lt;video&gt; с примером.
                           </div>
                         </div>
                       </div>
@@ -523,7 +520,7 @@
 
                     <div id="orderForm" class="mt-3 hidden flex-col gap-2 rounded-2xl bg-black/60 px-3 py-3 text-[11px]">
                       <div class="text-white/70 mb-1">
-                        Заполните контакты — мы вернёмся с вопросами по ТЗ и финальным просчётом под вашу задачу.
+                        Оставьте контакты — уточним ТЗ и подготовим точный расчёт.
                       </div>
 
                       <div class="flex flex-col gap-1">
@@ -531,8 +528,8 @@
                           Имя
                         </label>
                         <input id="clientName" type="text"
-                               class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                               placeholder="Как к вам обращаться?" />
+                              class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                              placeholder="Как к вам обращаться?" />
                       </div>
 
                       <div class="flex flex-col gap-1">
@@ -540,8 +537,8 @@
                           Контакт
                         </label>
                         <input id="clientContact" type="text"
-                               class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                               placeholder="Телеграм, почта или телефон" />
+                              class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                              placeholder="Телеграм, почта или телефон" />
                       </div>
 
                       <div class="flex flex-col gap-1">
@@ -550,11 +547,11 @@
                         </label>
                         <textarea id="clientComment"
                                   class="rounded-xl border border-white/15 bg-black/80 px-3 py-2 text-xs outline-none focus:border-lime-300 min-h-[60px]"
-                                  placeholder="Можете оставить ссылку на референсы или кратко описать задачу."></textarea>
+                                  placeholder="Ссылка на референсы или краткое описание задачи."></textarea>
                       </div>
 
                       <div class="text-[10px] text-white/60 mt-1">
-                        Отправка формы в демо никуда не улетает — на реальном сайте сюда подключается почта или CRM.
+                        В демо форма никуда не отправляется. На рабочем сайте подключите её к почте или CRM.
                       </div>
                     </div>
                   </div>
@@ -1026,68 +1023,68 @@
       },
       {
         tag: 'reels/tiktok',
-        name: 'Быстрый контент под запуск коллекции',
-        note: 'Сняли и сгенерили пачку из 12 роликов за две недели.'
+        name: 'Контент под запуск коллекции',
+        note: 'Сделали 12 роликов за две недели — всё под запуск новой линейки.'
       }
     ],
     event: [
       {
         tag: 'ивенты',
         name: 'AI-заставки для конференции',
-        note: 'Собрали фирменный визуальный мир и синхронизировали с таймингом мероприятия.'
+        note: 'Собрали фирменный визуальный мир и синхронизировали его с таймингом программы.'
       },
       {
         tag: 'оживлённые фото',
         name: 'Клип из фото участников',
-        note: 'Гости увидели себя в клипе на финальном экране — много сториз и репостов.'
+        note: 'Гости увидели себя на финальном экране — много сториз и репостов.'
       }
     ],
     avatar: [
       {
         tag: 'аватары',
         name: 'Персональные AI-открытки для команды',
-        note: 'Каждому сотруднику — свой персонаж и шутка. Рабочие чаты взорвались.'
+        note: 'Каждому сотруднику — свой персонаж и шутка. Чаты гудели весь день.'
       },
       {
         tag: 'персональное видео',
-        name: 'Аватар-ведущий для корпоративного стрима',
-        note: 'Сэкономили на ведущем и получили идеально контролируемый тайминг.'
+        name: 'Аватар-ведущий для стрима',
+        note: 'Сэкономили на ведущем и получили чёткий тайминг без форс-мажоров.'
       }
     ],
     tv: [
       {
         tag: 'тв-реклама',
         name: '15-секундный спот для федерального ТВ',
-        note: 'Сочетание живой съёмки и AI-дополнений, оптимизировано под эфирные требования.'
+        note: 'Живая съёмка + AI-дополнения, всё в рамках эфирных требований.'
       },
       {
-        tag: 'бренд-стори',
+        tag: 'бренд-история',
         name: 'Имиджевый ролик 30 сек.',
-        note: 'Работали в связке с креативным агентством и медиапланом.'
+        note: 'Работали вместе с креативным агентством и медиапланом.'
       }
     ],
     hostings: [
       {
         tag: 'ютуб/рутуб',
         name: 'Интро и интеграции для YouTube-канала',
-        note: 'Сделали AI-заставку и пачку рекламных вставок под спонсоров.'
+        note: 'Сделали AI-заставку и пакет рекламных вставок под спонсоров.'
       },
       {
         tag: 'лонгформат',
         name: 'Рекламный ролик для прероллов',
-        note: 'Уложились в 20 секунд с понятным оффером и кликабельным визуалом.'
+        note: 'Уложили оффер в 20 секунд, сделали понятный и кликабельный визуал.'
       }
     ],
     marketplaces: [
       {
         tag: 'маркетплейсы',
         name: 'Видео-карточки для товаров',
-        note: 'AI-демки продуктов вместо статичных фото, рост конверсии в просмотр.'
+        note: 'AI-демки вместо статичных фото, конверсия в просмотр выше.'
       },
       {
         tag: 'каталог',
-        name: 'Общий ролик-обзор линейки',
-        note: 'Смонтировали один ролик, который работает на весь ассортимент.'
+        name: 'Обзор всей линейки',
+        note: 'Один ролик, который работает на весь ассортимент.'
       }
     ]
   };
@@ -1196,7 +1193,7 @@
 
     const title = document.createElement('div');
     title.className = 'uppercase tracking-[0.16em] text-white/60 mb-2';
-    title.textContent = 'Посмотрите, как мы уже делали для других';
+    title.textContent = 'Похожие проекты';
     casesBlock.appendChild(title);
 
     const row = document.createElement('div');
@@ -1241,15 +1238,15 @@
     if (category === 'social') {
       if (avgDuration > 120) {
         basePerVideo = 500000;
-        baseLabel = 'ориентир как у «полноценного клипа»';
+        baseLabel = 'уровень «полноценного клипа»';
         baseDays = 14;
       } else if (avgDuration > 45) {
         basePerVideo = 100000;
-        baseLabel = 'ориентир как у рекламного ролика';
+        baseLabel = 'уровень рекламного ролика';
         baseDays = 5;
       } else {
         basePerVideo = 20000;
-        baseLabel = 'ориентир как у короткого ролика для соцсетей';
+        baseLabel = 'короткие ролики для соцсетей';
         baseDays = 3;
       }
     } else if (category === 'event') {
@@ -1268,7 +1265,7 @@
       }
     } else if (category === 'avatar') {
       basePerVideo = 20000;
-      baseLabel = 'персональные AI-аватары / приколы для участников';
+      baseLabel = 'персональные AI-аватары и шутливые ролики';
       baseDays = 2;
       if (city === 'other') {
         basePerVideo *= 1.4;
@@ -1276,11 +1273,11 @@
     } else if (category === 'tv' || category === 'hostings' || category === 'marketplaces') {
       if (avgDuration > 120) {
         basePerVideo = 500000;
-        baseLabel = 'ориентир как у «полноценного клипа»';
+        baseLabel = 'уровень «полноценного клипа»';
         baseDays = 14;
       } else {
         basePerVideo = 100000;
-        baseLabel = 'ориентир как у рекламного ролика';
+        baseLabel = 'уровень рекламного ролика';
         baseDays = 5;
       }
     }
@@ -1318,7 +1315,7 @@
     const roundedMax = Math.round(maxTotal / 1000) * 1000;
 
     resultPrice.textContent = `от ${formatMoney(roundedMin)} ₽ — до ${formatMoney(roundedMax)} ₽`;
-    resultSub.textContent = `Черновой ориентир за ${count} ролик(а). Точный бюджет фиксируем после согласования ТЗ и раскадровки.`;
+    resultSub.textContent = `Черновой ориентир за ${count} ролик(а). Точную смету даём после согласования ТЗ и раскадровки.`;
 
     summaryChips.innerHTML = '';
     const chipData = [];
@@ -1350,24 +1347,24 @@
       summaryChips.appendChild(div);
     });
 
-    let details = `Диапазон учитывает базовую продакшн-команду, AI-генерацию и два пакета правок. `;
+    let details = `В расчёте — продакшн-команда, AI-генерация и два пакета правок. `;
     if (baseLabel) {
       details += `По хронометражу и формату проект ближе к: ${baseLabel}. `;
     }
     if (scriptCheckbox.checked) {
-      details += `Вы добавили сценарную разработку — подключаем режиссёра, продумываем структуру и реплики, поэтому бюджет растёт, но ролик чувствуется как мини-фильм. `;
+      details += `Добавлен сценарий и режиссура — продумываем структуру и реплики, поэтому чек выше, но ролик выглядит как мини-фильм. `;
     } else {
-      details += `Можно сэкономить, если прийти с готовым сценарием или чётким референсом. `;
+      details += `Можно снизить бюджет, если прийти с готовым сценарием или чётким референсом. `;
     }
     if (extraEditsCheckbox.checked) {
-      details += `Плюс заложен дополнительный пакет правок (+25% к чеку) сверх двух базовых — чтобы спокойно докрутить нюансы. `;
+      details += `Закладываем дополнительный пакет правок (+25%) — можно поправить все до мельчайших деталей `;
     } else {
-      details += `В расчёт заложены два круга правок — этого обычно хватает, чтобы довести ролик до нужной кондиции. `;
+      details += `В расчёте два круга правок — обычно этого достаточно. `;
     }
     if (fastCheckbox.checked) {
-      details += `Сроки сжаты, поэтому часть команды работает в приоритете, что тоже добавляет к стоимости. `;
+      details += `Сжатые сроки — работаем в приоритете и частью расширенной команды, поэтому бюджет выше. `;
     } else {
-      details += `Стандартные сроки позволяют оптимизировать стоимость и тестировать смелые визуальные идеи. `;
+      details += `Стандартные сроки помогают держать бюджет и тестировать смелые идеи. `;
     }
     resultDetails.textContent = details;
 
@@ -1410,5 +1407,3 @@
     orderForm.classList.toggle('hidden');
   });
 </script>
-</body>
-</html>
